@@ -8,6 +8,8 @@ document.getElementById('upload').addEventListener('change', function(event) {
             img.style.display = 'block';
             document.querySelector('.upload-button').style.display = 'none';
             document.getElementById('delete-button').style.display = 'block';
+            // Show the upload button again after an image is uploaded
+            document.querySelector('.upload-container').classList.add('image-uploaded');
         };
         reader.readAsDataURL(file);
     }
@@ -128,4 +130,83 @@ function addComment(commentText, username) {
     // Clear the input after adding the comment
     const input = document.querySelector('.sendComment input');
     input.value = '';
+}
+
+// Event listener for the Create Post button
+document.querySelector('.createBtn').addEventListener('click', function() {
+    // Retrieve uploaded image URL
+    var uploadedImage = document.getElementById('uploaded-image').src;
+
+    // Retrieve caption text
+    var captionText = document.getElementById('caption').value;
+
+    // Validate if both image and caption are provided
+    if (uploadedImage && captionText.trim() !== '') {
+        // Create the post structure
+        var postContainer = document.createElement('div');
+        postContainer.classList.add('postContainer');
+        postContainer.onclick = function() { expandPost(this); };
+
+        var postImage = document.createElement('img');
+        postImage.classList.add('postImage');
+        postImage.src = uploadedImage;
+
+        var postUser = document.createElement('div');
+        postUser.classList.add('postUser');
+
+        var postUsername = document.createElement('p');
+        postUsername.classList.add('postUsername');
+        postUsername.textContent = 'johndoe: ';
+
+        var postCaption = document.createElement('p');
+        postCaption.classList.add('postCaption');
+        postCaption.textContent = captionText;
+
+        var postButtons = document.createElement('div');
+        postButtons.classList.add('postButtons');
+
+        var boneIcon = document.createElement('img');
+        boneIcon.classList.add('boneIcon');
+        boneIcon.src = 'https://www.svgrepo.com/show/513212/heart.svg';
+
+        var commentIcon = document.createElement('img');
+        commentIcon.classList.add('commentIcon');
+        commentIcon.src = 'https://www.svgrepo.com/show/522071/comment-3.svg';
+
+        // Append elements together
+        postUser.appendChild(postUsername);
+        postUser.appendChild(postCaption);
+
+        postButtons.appendChild(boneIcon);
+        postButtons.appendChild(commentIcon);
+
+        postContainer.appendChild(postImage);
+        postContainer.appendChild(postUser);
+        postContainer.appendChild(postButtons);
+
+        // Append the new post to the posts container
+        document.getElementById('postsContainer').appendChild(postContainer);
+
+        // Reset upload container and caption for the next post
+        resetUploadContainer();
+    } else {
+        alert('Please upload an image and enter a caption.');
+    }
+});
+
+// Function to reset upload container
+function resetUploadContainer() {
+    // Reset uploaded image and display styles
+    document.getElementById('uploaded-image').style.display = 'none';
+    document.getElementById('uploaded-image').src = '';
+    document.getElementById('delete-button').style.display = 'none';
+
+    // Show upload button again
+    document.querySelector('.upload-button').style.display = 'flex';
+
+    // Remove class indicating image uploaded
+    document.querySelector('.upload-container').classList.remove('image-uploaded');
+
+    // Clear caption input
+    document.getElementById('caption').value = '';
 }

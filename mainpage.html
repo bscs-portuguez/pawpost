@@ -21,7 +21,7 @@
                     <a href="#">Change Password</a>
                     <a href="#">Verification</a>
                     <a href="#">About Us</a>
-                    <a href="#">Log Out</a>
+                    <a href="loginpage.html">Log Out</a>
                 </div>
             </div>
         </nav>
@@ -61,32 +61,12 @@
                         <input type="text" id="caption" placeholder="Caption here...">
                     </div>
                     <div class="createPostBtn">
-                        <button type="submit" class="createBtn">Create Post</button>
-                    </div>
-                </div>                                
-                <div class="postContainer" onclick="expandPost(this)">
-                    <img class="postImage" src="https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_700/MTc2NDYzOTI3NzI5OTIzMjg1/please-take-care-of-the-aspin.webp">
-                    <div class="postUser">
-                        <p class="postUsername">johndoe: </p>
-                        <p class="postCaption">Found a cute aspin near EARIST.</p>
-                    </div>
-                    <div class="postButtons">
-                        <img class="boneIcon" src="https://www.svgrepo.com/show/513212/heart.svg">
-                        <img class="commentIcon" src="https://www.svgrepo.com/show/522071/comment-3.svg">
+                        <button type="button" class="createBtn">Create Post</button>
                     </div>
                 </div>
-
-                <div class="postContainer" onclick="expandPost(this)">
-                    <img class="postImage" src="https://images.theconversation.com/files/566196/original/file-20231218-21-mdxtlx.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&h=505&fit=crop&dpr=1">
-                    <div class="postUser">
-                        <p class="postUsername">catlover21: </p>
-                        <p class="postCaption">My cat is so random. I love it.</p>
-                    </div>
-                    <div class="postButtons">
-                        <img class="boneIcon" src="https://www.svgrepo.com/show/513212/heart.svg">
-                        <img class="commentIcon" src="https://www.svgrepo.com/show/522071/comment-3.svg">
-                    </div>
-                </div>
+                
+                <div id="postsContainer"></div>                
+                
                 <div id="modalOverlay" class="modalOverlay" onclick="closeModal(event)">
                     <div id="expandedPost" class="expandedPost" onclick="stopPropagation(event)"></div>
                 </div>

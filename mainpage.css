@@ -132,7 +132,7 @@ p {
 }
 
 .posts {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 40px;
 }
@@ -146,6 +146,7 @@ p {
     align-items: center;
     background-color: #DEAC80;
     border-radius: 20px;
+    margin-bottom: 40px; /* Space between createPostContainer and posts */
 }
 
 .upload-container {
@@ -222,8 +223,8 @@ p {
 }
 
 .postContainer {
-    width: 400px;
-    height: 450px;
+    width: 400px; /* Adjust width as needed */
+    height: 450px; /* Adjust height as needed */
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -232,6 +233,7 @@ p {
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
+    margin-bottom: 40px; /* Space between posts */
 }
 
 .postImage {
