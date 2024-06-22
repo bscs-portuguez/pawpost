@@ -1,0 +1,200 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+.container {
+    width: 50rem;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 4rem 40px 4rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+.category {
+    display:flex;
+    width: 50rem;
+    font-weight: bold;
+}
+
+.first-name {
+    width: 22rem;
+
+}
+
+.middle-initial {
+    width: 6rem;
+
+}
+
+.last-name {
+    width: 22rem;
+}
+
+.house-number {
+    width: 10rem;
+}
+
+.street-name {
+    width: 20rem;
+}
+
+.barangay {
+    width: 20rem;
+}
+
+.municipal {
+    width: 20rem;
+}
+
+.region {
+    width: 20rem;
+}
+
+.postal-code {
+    width: 10rem;
+}
+
+.username {
+    width: 25rem;
+}
+
+.password {
+    width: 25rem;
+}
+
+.confirm-password {
+    width: 25rem;
+}
+
+.email {
+    width: 25rem;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+  }
+  
+.input-group {
+    margin-bottom: 20px;
+    margin-right: 2rem;
+    margin-left: 1rem;
+  }
+  
+.input-group:last-child {
+    margin-right: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+  }
+  
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+  
+button {
+    background-color: #B99470;
+    color: white;
+    padding: 15px 100px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+button:hover {
+    background-color: #DEAC80;
+    color: white;
+}
+
+.toLoginPage {
+    font-size: 1.1rem;
+}
+
+.toLoginPage a {
+    color: #B99470;
+    text-decoration: none;
+}
+
+.toLoginPage a:hover {
+    text-decoration: underline;
+}
+
+.submitBtn {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+  /* body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+.input-group {
+    margin-bottom: 20px;
+  }
+  
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+.input-group input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+button:hover {
+    background-color: #45a049;
+  } */

@@ -1,0 +1,423 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.4rem;
+}
+
+.logo {
+    background-color: #DEAC80;
+    width: 200px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 6vw;
+    z-index: 2;
+}
+
+.header {
+    width: 100vw;
+    height: 100px;
+    background-color: #DEAC80;
+    position: fixed;
+    display:flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.logoContainer {
+    width: 25vw;
+    height: 100px;
+}
+
+nav {
+    width: 75vw;
+    height: 100px;
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 2vw;
+}
+
+.dropdown {
+    position: relative;
+}
+.settingsBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    fill: #FFFFFF; /* Assuming your SVG uses fill for its color */
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.show {
+    display: block;
+}
+
+button {
+    margin-right: 3vw;
+    font-size: 1.4rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 12px 15px;
+    background-color: #DEAC80;
+    border: 0;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #B99470;
+}
+
+button:nth-child(1){
+    padding: 14.5px 17.5px;
+}
+
+.search {
+    width: 30px;
+}
+
+main {
+    display:flex;
+    padding-top: 120px;
+    padding-left: 50px;
+    height: 100vh;
+}
+
+.sidebar {
+    padding-top: 50px;
+    width: 300px;
+    margin-right: 20px;
+    position: fixed;
+}
+
+.categoryContainer {
+    padding: 0 20px 20px 20px;
+    border: 1px solid gray;
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsFeed {
+    padding-left: 40px;
+    margin-left: 340px;
+    border-left: 2px solid black;
+}
+
+p {
+    padding: 0;
+    margin: 6px;
+}
+
+.posts {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.createPostContainer {
+    width: 400px;
+    height: 450px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DEAC80;
+    border-radius: 20px;
+}
+
+.upload-container {
+    position: relative;
+    margin: 20px;
+    width: 350px;
+    height: 280px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#upload {
+    display: none;
+}
+
+.upload-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button {
+    margin: 0;
+    padding:0;
+    font-weight: bold;
+    font-size: 20px;
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+.delete-button:hover{
+    background-color: red;
+}
+
+.upload-button:hover {
+    background-color: #d0d0d0;
+}
+
+#caption {
+    width: 350px;
+    height: 35px;
+    padding: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.createPostBtn {
+    width: 350px;
+}
+
+.createPostBtn button {
+    width: 350px;
+    font-weight: bold;
+    background-color: #B99470;
+}
+
+.postContainer {
+    width: 400px;
+    height: 450px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DEAC80;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.postImage {
+    width: 350px;
+    height: 280px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    object-fit: cover;
+}
+
+.postUser {
+    width: 350px;
+    display: block;
+    color: black;
+    padding: 10px;
+}
+
+.postUsername {
+    font-weight: bold;
+}
+
+.postCaption {
+    font-size: 1.2rem;
+}
+
+.postButtons {
+    padding-top: 20px;
+    width: 350px;
+    height: 40px;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.boneIcon, .commentIcon {
+    height: 40px;
+    cursor: pointer;
+}
+
+.modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.expandedPost {
+    width: 800px;
+    height: 450px;
+    border: 1px solid black;
+    display: flex;
+    background-color: #DEAC80;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.imgAndBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+h4 {
+    padding: 0;
+    margin: 20px 0 10px 0;
+}
+
+.commentSec {
+    border-left: 1px solid black;
+    width: 50%;
+    height: 450px; /* Updated height */
+    background-color: #F7DCB9;
+    display: flex;
+    flex-direction: column;
+}
+
+.commentsContainer {
+    flex-grow: 1;
+    overflow-y: auto; /* Add scrollbar when content exceeds container height */
+    padding: 10px;
+    max-height: 100%; /* Ensure it does not exceed its container */
+}
+
+.commentSecHeader {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.sendComment, .eachComment {
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.sendComment input {
+    font-size: 1.2rem;
+    padding: 2px;
+    width: 275px;
+    height: 40px;
+}
+
+.sendComment button {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    height: 37px;
+    width: 70px;
+    color: black;
+}
+
+.sendComment button:hover {
+    color: white;
+}
+
+@media (max-width: 675px){
+    .logo {
+        background-color: #DEAC80;
+        width: 120px;
+        height: 75px;
+        padding: 10px;
+        border-radius: 50%;
+        margin-left: 6vw;
+        z-index: 2;
+    }
+
+    .icon {
+        width: 40px;
+    }
+
+    .search {
+        width: 30px;
+    }
+}
+
+@media (max-width: 550px){
+    
+
+    .header {
+        width: 100vw;
+        height: 180px;
+        background-color: #DEAC80;
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-right: 3vw;
+    }
+
+    .logo {
+        background-color: #DEAC80;
+        position: relative;
+        margin: 0;
+        width: 120px;
+        height: 75px;
+        padding: 10px;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    nav {
+        width: 75vw;
+        height: 100px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0
+    }
+
+    .icon {
+        width: 40px;
+    }
+
+    .search {
+        width: 30px;
+    }
+}
