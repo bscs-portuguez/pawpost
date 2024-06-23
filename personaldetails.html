@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="personaldetails.css">
+    <title>Paw Post - Personal Details</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logoContainer">
+            <img class="logo" src="images/logos/PawPostLogo3.png" alt="pawpostlogo.png">
+        </div>
+        <nav>
+            <button class="searchBtn"><img class="search icon" src="https://www.svgrepo.com/show/513607/search.svg"></button>
+            <a href="mainpage.html"><button class="homeBtn"><img class="icon" src="https://www.svgrepo.com/show/491253/home.svg"></button></a>
+            <button class="profileBtn"><img class="icon" src="https://www.svgrepo.com/show/474079/profile.svg"></button>
+            <div class="dropdown">
+                <button class="settingsBtn" onclick="toggleDropdown()"><img class="icon" onclick="toggleDropdown()" src="https://www.svgrepo.com/show/81129/settings-gears.svg"></button>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="#">Personal Details</a>
+                    <a href="#">Change Password</a>
+                    <a href="#">Verification</a>
+                    <a href="#">About Us</a>
+                    <a href="loginpage.html">Log Out</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div class="parentContainer">
+            <h2>Personal Details</h2>
+            <div class="detailsContainer">
+                <div class="pfpAndBio">
+                    <div class="upload-container">
+                        <input type="file" id="upload" accept="image/*" />
+                        <label for="upload" class="upload-button">
+                            Click to Upload Image
+                        </label>
+                        <img id="uploaded-image" style="display:none; width: 100%; height: 100%; object-fit: cover;" />
+                        <button id="delete-button" style="display:none;" class="delete-button">X</button>
+                    </div>
+                    <h4 style="display:block;">your_username</h4>
+                    <input class="usernameInput" style="display:none;">
+                    <div class="bioContainer">
+                        <h3>Bio:</h3>
+                        <p style="display:block;">No bio yet.</p>
+                        <textarea id="myTextarea" maxlength="100" rows="4" cols="50" class="bioInput" style="display:none;"></textarea>
+                        <div id="counter">0/100 characters</div>
+                    </div>
+                </div>
+                
+                <div class="nameAndAddress">
+                    <div class="name">
+                        <h4>Name</h4> 
+                        <div class="eachDetail">
+                            <h5>First Name:</h5>
+                            <p style="display:block;">John</p>
+                            <input style="display:none;">
+                        </div>
+                        <div class="eachDetail">
+                            <h5>Middle Initial:</h5>
+                            <p style="display:block;">D.</p>
+                            <input style="display:none;">
+                        </div>
+                        <div class="eachDetail">
+                            <h5>Last Name:</h5>
+                            <p style="display:block;">Doe</p>
+                            <input style="display:none;">
+                        </div>
+                        <div class="eachDetail">
+                            <h5>Email:</h5>
+                            <p style="display:block;">johndoe@gmail.com</p>
+                            <input style="display:none;">
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h4>Address</h4>
+                        <div class="eachDetail">
+                            <h5>House Number:</h5>
+                            <p style="display:block;">123</p>
+                            <input style="display:none;">
+                        </div>
+                        <div class="eachDetail">
+                            <h5>Street Name:</h5>
+                            <p style="display:block;">Sesame St.</p>
+                            <input style="display:none;">
+                        </div>
+                        <div class="eachDetail">
+                            <h5>Barangay:</h5>
+                            <p style="display:block;">Brgy. Malamig</p>
+                            <input style="display:none;">
+                        </div>
+                        <div class="eachDetail">
+                            <h5>Municipal:</h5>
+                            <p style="display:block;">Mandaluyong City</p>
+                            <input style="display:none;">
+                        </div>
+                        <div class="eachDetail">
+                            <h5>Region:</h5>
+                            <p style="display:block;">NCR</p>
+                            <input style="display:none;">
+                        </div>
+                        <div class="eachDetail">
+                            <h5>Zip Code:</h5>
+                            <p style="display:block;">1550</p>
+                            <input style="display:none;">
+                        </div>
+                        <div class="saveBtnParent">
+                            <button class="saveEditBtn">Edit</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="personaldetails.js"></script>
+</body>
+</html>
